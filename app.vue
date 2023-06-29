@@ -8,13 +8,13 @@ const app = useAppConfig() as AppConfigInput
 
 useHead({
   title: app.name,
-  titleTemplate: '%s - Solar Jobs',
+  titleTemplate: '%s - Louthbin',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     {
       hid: 'description',
       name: 'The number one website for finding jobs in Solar',
-      content: 'Solar Jobs',
+      content: 'Louthbin',
     },
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

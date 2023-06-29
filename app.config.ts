@@ -1,7 +1,7 @@
 export default defineAppConfig({
-  name: 'Solar Jobs',
+  name: 'Louthbin',
   author: {
     name: 'kieron',
-    link: 'https://twitter.com/kieronbos',
+    link: 'https://github.com/kieron',
   },
 })

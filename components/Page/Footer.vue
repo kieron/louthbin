@@ -15,7 +15,7 @@ const app = useAppConfig() as AppConfigInput
         </div>
         <div class="text-xs text-gray-600 dark:text-gray-400">
           Copyright © 2023 <a :href="app.author.link">{{ app.author.name }}</a
-          >. All rights reserved. Made with <span class="text-red-500">❤</span>
+          >. All rights reserved.
         </div>
       </div>
     </section>

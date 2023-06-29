@@ -14,7 +14,6 @@
         <div
           class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
         >
-          <ThemeSwitcher />
           <Anchor
             class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
             href="https://github.com/viandwi24/nuxt3-awesome-starter"
@@ -30,9 +29,7 @@
         <ActionSheetBody>
           <ActionSheetHeader text="Menu" />
           <div class="mt-6 text-sm font-bold capitalize">Theme</div>
-          <div class="mt-2">
-            <ThemeSwitcher type="select-box" />
-          </div>
+
         </ActionSheetBody>
         <Button
           type="secondary"

@@ -1,13 +1,13 @@
-# Solar Jobs
-a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.  
+# Louthbin
+a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.
 
 _This template was built to make it easier to create web projects using Nuxt 3. It was originally designed for coursework and portfolio templates. (hence there will be lots of ui components for easy reuse)_
 
-> **NOTES** 
+> **NOTES**
 > - A new update is under development, you can see it [here](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2)
-> - This Project using "pnpm" as package manager. (not npm or yarn)!!! 
+> - This Project using "pnpm" as package manager. (not npm or yarn)!!!
 > - Nuxt 3 now in stable version
-> - Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)  
+> - Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)
 > - Roadmap can be found [here](https://v3.nuxtjs.org/community/roadmap)
 
 ## Features
@@ -71,7 +71,7 @@ _This template was built to make it easier to create web projects using Nuxt 3. 
 </p>
 
 ## Table of Contents
-- [Solar Jobs](#nuxt-3-awesome-starter)
+- [Louthbin](#nuxt-3-awesome-starter)
   - [Features](#features)
   - [To Do](#to-do)
   - [Preview](#preview)
@@ -130,15 +130,15 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
 ## Notes
 ### Nuxt Content
-With Nuxt Content, you can just create markdown file (recommended) inside `content` folder.  
+With Nuxt Content, you can just create markdown file (recommended) inside `content` folder.
 But this is only available for SSR (Server Side Rendering) mode. Static mode still not working, you can see the issue https://github.com/nuxt/content/issues/1202
-For now, you can follow 
+For now, you can follow
 
 ### Custom Workspace Snippets
 This workspace including custom snippets for VSCode.
-- **n3:content**  
+- **n3:content**
   content template with markdown
-- **n3:page**  
+- **n3:page**
   page template
 
 ### Styles

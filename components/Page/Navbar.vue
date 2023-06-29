@@ -10,7 +10,6 @@ export interface IMenuItem {
 
 const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
-  { type: 'link', text: 'Jobs', route: { name: 'jobs' } },
   // {
   //   type: 'button',
   //   text: 'pages.dashboard.nav',
@@ -60,11 +59,7 @@ const menus = computed((): IMenuItem[] => [
             </li>
           </ul>
         </nav>
-        <div
-          class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
-        >
-          <ThemeSwitcher />
-        </div>
+
       </div>
     </template>
     <template #options="{ toggleOptions }">
@@ -101,9 +96,7 @@ const menus = computed((): IMenuItem[] => [
             </ul>
           </nav>
           <div class="mt-6 text-sm font-bold capitalize">Theme</div>
-          <div class="mt-2">
-            <ThemeSwitcher type="select-box" />
-          </div>
+
         </ActionSheetBody>
         <Button
           text="Close"
