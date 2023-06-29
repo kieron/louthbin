@@ -181,23 +181,24 @@ const binData: IBinData[] = [
     date: '2024-03-26',
     name: 'domestic waste'
   },
-];
+]
 
+const currentBinData = binData.filter((bin) => {
+  return new Date(bin.date) > new Date()
+})
 
 </script>
 
 <template>
   <PageWrapper class="flex-1 flex">
-    <div class="background-overlay">
 
-    </div>
     <PageBody class="flex-1 flex">
       <PageSection class="flex-1 flex items-center">
         <div class="flex-1 flex flex-col space-y-1">
-          <div :key="index" v-for="day, index in binData" class="bg-green-200 rounded text-gray-900 h-12 flex items-center px-5 w-full">
+          <div :key="index" v-for="day, index in currentBinData" class="bg-green-200 rounded text-gray-900 h-12 flex items-center px-5 w-full">
               <div class="bg-green-300 px-3 rounded font-extrabold mr-2">{{format(new Date(day.date), 'dd MMM yyyy')}}</div>
-              <div class="capitalize font-semibold">{{day.name}}</div>
-              <div v-if="true || isToday(new Date(day.date))" class="bg-red px-2 rounded font-extrabold ml-auto">
+              <div class="capitalize font-semibold text-sm">{{day.name}}</div>
+              <div v-if="isToday(new Date(day.date))" class="bg-red px-2 rounded font-extrabold ml-auto">
                 Today!
               </div>
               <div v-if="isTomorrow(new Date(day.date))" class="bg-red px-2 rounded font-extrabold ml-auto">
