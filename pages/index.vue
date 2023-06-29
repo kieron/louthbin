@@ -195,8 +195,8 @@ const currentBinData = binData.filter((bin) => {
     <PageBody class="flex-1 flex">
       <PageSection class="flex-1 flex items-center">
         <div class="flex-1 flex flex-col space-y-1">
-          <div :key="index" v-for="day, index in currentBinData" class="bg-green-200 rounded text-gray-900 h-12 flex items-center px-5 w-full">
-              <div class="bg-green-300 px-3 rounded font-extrabold mr-2">{{format(new Date(day.date), 'EEE dd MMM yyyy')}}</div>
+          <div :key="index" v-for="day, index in currentBinData" class="bg-green-200 rounded text-gray-900 h-11 flex items-center px-1 w-full">
+              <div class="bg-green-300 px-2 rounded font-extrabold mr-2 py-1 w-content">{{format(new Date(day.date), 'EEE dd MMM yyyy')}}</div>
               <div class="capitalize font-semibold text-sm">{{day.name}}</div>
               <div v-if="isToday(new Date(day.date))" class="bg-red px-2 rounded font-extrabold ml-auto">
                 Today!
