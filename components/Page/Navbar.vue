@@ -21,17 +21,13 @@ const menus = computed((): IMenuItem[] => [
 <template>
   <BuilderNavbar>
     <template #banner>
-      <!-- <div
-        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-primary-500 capitalize"
+   <div
+        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-primary-500"
       >
         <span class="mr-1">
-          <Anchor
-            class="underline font-bold"
-            text="others.learn_more"
-            href="https://github.com/viandwi24/nuxt3-awesome-starter"
-          />
+         sry if its wrong
         </span>
-      </div> -->
+      </div>
     </template>
     <template #menu>
       <div class="relative hidden lg:flex items-center ml-auto">

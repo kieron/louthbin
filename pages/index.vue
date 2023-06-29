@@ -6,6 +6,181 @@ definePageMeta({
   layout: 'page',
 })
 
+const binData = [
+  {
+    date: '06-06-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '13-06-2023',
+    name: 'recycling'
+  },
+  {
+    date: '20-06-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '27-06-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '04-07-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '11-07-2023',
+    name: 'recycling'
+  },
+  {
+    date: '18-07-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '25-07-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '01-08-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '08-08-2023',
+    name: 'recycling'
+  },
+  {
+    date: '15-08-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '22-08-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '29-08-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '05-09-2023',
+    name: 'recycling'
+  },
+  {
+    date: '12-09-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '19-09-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '26-09-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '03-10-2023',
+    name: 'recycling'
+  },
+  {
+    date: '10-10-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '17-10-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '24-10-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '31-10-2023',
+    name: 'recycling'
+  },
+  {
+    date: '07-11-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '14-11-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '21-11-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '28-11-2023',
+    name: 'recycling'
+  },
+  {
+    date: '05-12-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '12-12-2023',
+    name: 'paper and card'
+  },
+  {
+    date: '19-12-2023',
+    name: 'domestic waste'
+  },
+  {
+    date: '26-12-2023',
+    name: 'NO COLLECTION'
+  },
+  {
+    date: '02-01-2024',
+    name: 'domestic waste && recycling'
+  },
+  {
+    date: '09-01-2024',
+    name: 'paper and card'
+  },
+  {
+    date: '16-01-2024',
+    name: 'domestic waste'
+  },
+  {
+    date: '23-01-2024',
+    name: 'recycling'
+  },
+  {
+    date: '30-01-2024',
+    name: 'domestic waste'
+  },
+  {
+    date: '06-02-2024',
+    name: 'paper and card'
+  },
+  {
+    date: '13-02-2024',
+    name: 'domestic waste'
+  },
+  {
+    date: '20-02-2024',
+    name: 'recycling'
+  },
+  {
+    date: '27-02-2024',
+    name: 'domestic waste'
+  },
+  {
+    date: '05-03-2024',
+    name: 'paper and card'
+  },
+  {
+    date: '12-03-2024',
+    name: 'domestic waste'
+  },
+  {
+    date: '19-03-2024',
+    name: 'recycling'
+  },
+  {
+    date: '26-03-2024',
+    name: 'domestic waste'
+  },
+]
+
 </script>
 
 <template>
@@ -30,6 +205,7 @@ definePageMeta({
               class="animated-text-bg drop-shadow-xl text-4xl xl:text-5xl 2xl:text-6xl block font-black uppercase"
             >
               <span class="">wat bin</span>
+              {{binData}}
             </span>
           </h1>
         </div>
@@ -41,93 +217,6 @@ definePageMeta({
 <style lang="scss">
 @import '../assets/sass/variables';
 
-@keyframes anim-fg-1 {
-  0%,
-  16.667%,
-  100% {
-    opacity: 1;
-  }
-
-  33.333%,
-  83.333% {
-    opacity: 0;
-  }
-}
-
-@keyframes anim-fg-2 {
-  0%,
-  16.667%,
-  66.667%,
-  100% {
-    opacity: 0;
-  }
-
-  33.333%,
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes anim-fg-3 {
-  0%,
-  50%,
-  100% {
-    opacity: 0;
-  }
-
-  66.667%,
-  83.333% {
-    opacity: 1;
-  }
-}
-
-.animated-text-bg {
-  position: relative;
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  content: var(--content);
-  display: block;
-  width: 100%;
-  color: theme('colors.slate.800');
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  padding-left: $padding;
-  padding-right: $padding;
-  &:before {
-    content: var(--content);
-    position: absolute;
-    display: block;
-    width: 100%;
-    color: theme('colors.slate.800');
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    padding-left: $padding;
-    padding-right: $padding;
-  }
-}
-.animated-text-fg {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-left: $padding;
-  padding-right: $padding;
-  background-image: linear-gradient(
-    90deg,
-    var(--start-color),
-    var(--end-color)
-  );
-  position: relative;
-  opacity: 0;
-  z-index: 1;
-  animation: var(--animation-name) 8s infinite;
-}
 
 html.dark {
   .animated-text-bg {
