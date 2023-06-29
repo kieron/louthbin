@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-// composable
-import { format } from 'date-fns'
-// meta
+import { format, isToday, isTomorrow, isTuesday } from 'date-fns'
+
 definePageMeta({
   layout: 'page',
 })
@@ -190,22 +189,20 @@ const binData: IBinData[] = [
 <template>
   <PageWrapper class="flex-1 flex">
     <div class="background-overlay">
-      <div
-        class="absolute top-0 left-0 transform translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"
-      ></div>
-      <div
-        class="absolute hidden md:block top-0 left-0 transform translate-x-18 translate-y-20 h-28 w-28 rounded-full bg-blue-600 linear-wipe"
-      ></div>
-      <div
-        class="absolute hidden md:block bottom-0 right-0 transform -translate-x-4 -translate-y-40 h-16 w-16 rounded bg-purple-600 linear-wipe"
-      ></div>
-      <div class="absolute bottom-0 right-0 triangle-shape"></div>
+
     </div>
     <PageBody class="flex-1 flex">
       <PageSection class="flex-1 flex items-center">
-        <div class="flex-1 flex flex-col z-10">
-          <div :key="index" v-for="day, index in binData">
-              {{format(new Date(day.date), 'dd MMM yyyy')}} - {{day.name}}
+        <div class="flex-1 flex flex-col space-y-1">
+          <div :key="index" v-for="day, index in binData" class="bg-green-200 rounded text-gray-900 h-12 flex items-center px-5 w-full">
+              <div class="bg-green-300 px-3 rounded font-extrabold mr-2">{{format(new Date(day.date), 'dd MMM yyyy')}}</div>
+              <div class="capitalize font-semibold">{{day.name}}</div>
+              <div v-if="true || isToday(new Date(day.date))" class="bg-red px-2 rounded font-extrabold ml-auto">
+                Today!
+              </div>
+              <div v-if="isTomorrow(new Date(day.date))" class="bg-red px-2 rounded font-extrabold ml-auto">
+                Tomorrow!
+              </div>
           </div>
         </div>
       </PageSection>
