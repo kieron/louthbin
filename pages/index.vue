@@ -182,7 +182,7 @@ const currentBinData = binData.filter((bin) => {
 </script>
 
 <template>
-  <div class="flex-1 flex flex-col space-y-1 p-2">
+  <div class="flex-1 flex flex-col space-y-1 p-2 bg-gray-900">
     <div
       :key="index"
       v-for="(day, index) in currentBinData"
