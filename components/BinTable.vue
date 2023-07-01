@@ -124,7 +124,7 @@ const binData = [
   },
   {
     date: "2024-01-02",
-    name: "domestic waste && recycling",
+    name: "domestic waste & recycling",
   },
   {
     date: "2024-01-09",
@@ -195,7 +195,7 @@ const currentBinData = binData.filter((bin) => {
         {{ day.name }}
         <span
           v-if="index === 0"
-          class="bg-green-400 ml-2 p-1 rounded font-bold ml-auto text-xs md:text-sm"
+          class="bg-green-400 ml-2 p-1 rounded font-bold ml-auto text-xs md:text-sm md:ml-4"
         >
           Next Bin!
         </span>
