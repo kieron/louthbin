@@ -202,7 +202,7 @@ const currentBinData = binData.filter((bin) => {
       </div>
 
       <div
-        v-if="true || isToday(new Date(day.date))"
+        v-if="isToday(new Date(day.date))"
         class="bg-red-300 p-1 rounded font-bold ml-auto text-sm md:text-md"
       >
         Today!
