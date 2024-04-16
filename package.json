@@ -11,10 +11,8 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^18",
-    "nuxt": "^3.6.1"  ,
+    "nuxt": "^3.6.1",
     "date-fns": "^2.30.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
