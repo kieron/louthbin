@@ -17,7 +17,7 @@ const currentBinData = binData.filter((bin) => {
       class="bg-green-200 rounded text-gray-900 h-11 flex items-center px-1 w-full"
     >
       <div
-        class="bg-green-300 px-2 rounded font-extrabold mr-2 py-1 w-content text-xs md:text-md"
+        class="bg-green-300 px-2 rounded font-extrabold mr-2 py-1 w-content text-xs md:text-md min-w-[110px] text-center"
       >
         {{ format(new Date(day.date), "EEE dd MMM yy") }}
       </div>
