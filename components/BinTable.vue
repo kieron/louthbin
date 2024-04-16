@@ -25,9 +25,9 @@ const currentBinData = binData.filter((bin) => {
       <div class="capitalize font-semibold text-xs md:text-sm">
         {{ day.name }}
       </div>
-      <div class="ml-auto flex flex-row gap-2">
+      <div class="ml-auto md:ml-2 flex flex-row gap-2">
         <NextBadge v-if="index === 0" />
-        <TodayBadge v-if="isToday(new Date(day.date))" />
+        <TodayBadge v-if="true || isToday(new Date(day.date))" />
         <TomorrowBadge v-if="isTomorrow(new Date(day.date))" />
       </div>
     </div>
