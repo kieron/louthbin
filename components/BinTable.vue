@@ -3,6 +3,7 @@ import { format, isToday, isTomorrow } from "date-fns";
 import TodayBadge from "./TodayBadge.vue";
 import TomorrowBadge from "./TomorrowBadge.vue";
 import binData from "~/constants/binData.js";
+import NextBadge from "./NextBadge.vue";
 
 const currentBinData = binData.filter((bin) => {
   return new Date(bin.date) > new Date();
@@ -23,16 +24,12 @@ const currentBinData = binData.filter((bin) => {
       </div>
       <div class="capitalize font-semibold text-xs md:text-sm">
         {{ day.name }}
-        <span
-          v-if="index === 0"
-          class="bg-green-400 ml-2 p-1 rounded font-bold ml-auto text-xs md:text-sm md:ml-4"
-        >
-          Next Bin!
-        </span>
       </div>
-
-      <TodayBadge v-if="isToday(new Date(day.date))" />
-      <TomorrowBadge v-if="isTomorrow(new Date(day.date))" />
+      <div class="ml-auto flex flex-row gap-2">
+        <NextBadge v-if="index === 0" />
+        <TodayBadge v-if="isToday(new Date(day.date))" />
+        <TomorrowBadge v-if="isTomorrow(new Date(day.date))" />
+      </div>
     </div>
   </div>
 </template>
