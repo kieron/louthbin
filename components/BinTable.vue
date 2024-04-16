@@ -1,5 +1,7 @@
 <script setup>
 import { format, isToday, isTomorrow, isTuesday } from "date-fns";
+import TodayBadge from "./TodayBadge.vue";
+import TomorrowBadge from "./TomorrowBadge.vue";
 
 const binData = [
   { date: "2024-04-02", name: "paper and card" },
@@ -83,18 +85,8 @@ const currentBinData = binData.filter((bin) => {
         </span>
       </div>
 
-      <div
-        v-if="isToday(new Date(day.date))"
-        class="bg-red-300 p-1 rounded font-bold ml-auto text-sm md:text-md"
-      >
-        Today!
-      </div>
-      <div
-        v-if="isTomorrow(new Date(day.date))"
-        class="bg-red-300 p-1 rounded font-bold ml-auto text-sm md:text-md"
-      >
-        Tomorrow!
-      </div>
+      <TodayBadge v-if="isToday(new Date(day.date))" />
+      <TomorrowBadge v-if="isTomorrow(new Date(day.date))" />
     </div>
   </div>
 </template>
