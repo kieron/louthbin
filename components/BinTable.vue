@@ -1,5 +1,5 @@
 <script setup>
-import { format, isToday, isTomorrow, isTuesday } from "date-fns";
+import { format, isToday, isTomorrow } from "date-fns";
 import TodayBadge from "./TodayBadge.vue";
 import TomorrowBadge from "./TomorrowBadge.vue";
 import binData from "~/constants/binData.js";
