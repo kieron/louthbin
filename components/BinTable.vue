@@ -27,7 +27,7 @@ const currentBinData = binData.filter((bin) => {
       </div>
       <div class="ml-auto md:ml-2 flex flex-row gap-2">
         <NextBadge v-if="index === 0" />
-        <TodayBadge v-if="true || isToday(new Date(day.date))" />
+        <TodayBadge v-if="isToday(new Date(day.date))" />
         <TomorrowBadge v-if="isTomorrow(new Date(day.date))" />
       </div>
     </div>
