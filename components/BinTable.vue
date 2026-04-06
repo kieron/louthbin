@@ -10,10 +10,10 @@ const currentBinData = binData.filter((bin) => {
 });
 
 const binColors = {
-  "domestic waste": { row: "bg-gray-800 text-gray-100", badge: "bg-gray-900 text-gray-100" },
+  "domestic waste": { row: "bg-gray-700 text-gray-100", badge: "bg-gray-900 text-gray-100" },
   "recycling": { row: "bg-gray-300 text-gray-900", badge: "bg-gray-400 text-gray-900" },
   "paper and card": { row: "bg-purple-200 text-gray-900", badge: "bg-purple-300 text-gray-900" },
-  "green waste": { row: "bg-green-200 text-gray-900", badge: "bg-green-300 text-gray-900" },
+  "green waste": { row: "bg-green-300 text-gray-900", badge: "bg-green-500 text-gray-900" },
 };
 </script>
 
@@ -22,7 +22,7 @@ const binColors = {
     <div
       :key="index"
       v-for="(day, index) in currentBinData"
-      :class="[binColors[day.name]?.row, 'rounded h-11 flex items-center px-1 w-full']"
+      :class="[binColors[day.name]?.row, 'rounded h-11 flex items-center px-1 w-full border border-gray-600']"
     >
       <div
         :class="[binColors[day.name]?.badge, 'px-2 rounded font-extrabold mr-2 py-1 w-content text-xs md:text-md min-w-[110px] text-center']"

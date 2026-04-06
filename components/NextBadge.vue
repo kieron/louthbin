@@ -1,5 +1,5 @@
 <template>
-  <span class="bg-green-400 p-1 rounded font-bold text-sm md:text-md">
+  <span class="bg-blue-400 text-black px-1 py-0.5 rounded font-bold text-[10px] md:text-xs whitespace-nowrap">
     Next Bin!
   </span>
 </template>
