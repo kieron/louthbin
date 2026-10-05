@@ -7,11 +7,12 @@ useHead({
       content: "Louth Bin Schedule - Sorry if its wrong.",
     },
   ],
+  bodyAttrs: { class: "bg-gray-900" },
 });
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen flex flex-col">
     <div class="w-full h-6 bg-green-300 flex justify-center items-center">
       <span class="text-gray-900 text-xs">✌️ sry if its wrong ~ kieron</span>
     </div>
